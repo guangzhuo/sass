@@ -1,0 +1,57 @@
+@import "variables.scss";
+.iconsprite{
+  display: inline-block;
+  vertical-align: middle;
+}
+html {
+  height: 100%;
+}
+input{
+  &:-ms-input-placeholder{
+    color:$placeholder-color;
+  }
+  &::-webkit-input-placeholder{
+    color:$placeholder-color;
+  }
+  &::-moz-placeholder{
+     color:$placeholder-color;
+  }
+  &:-moz-placeholder{
+     color:$placeholder-color;
+  }
+}
+html {
+  height: 100%;
+}
+body{
+    overflow-y: auto;
+    padding-right: 0;
+    // position: relative;
+    // min-height: 100%;
+    height: 100%;
+    min-width: $body-min-width;
+    font-family: "PingFangSC-Regular","Helvetica Neue",Arial,"Microsoft Yahei",Helvetica,sans-serif;
+}
+#_lvx{
+  height: 100%;
+}
+.lx-container{
+  margin-right:auto;margin-left:auto;padding-left:0;padding-right:0}
+  @media (min-width:1200px){.lx-container{width:1230px;padding: 0 15px;}
+}
+/*这个样式为head-upload.vue文件所用，因为bootstrap插件的影响导致样式不能正常显示，所以放在这里*/
+input.lvx-upload__input {
+  display: none;
+}
+
+
+// 合同订购流程
+#orderForm{
+  .areaWrap{
+    .lvx-textarea__inner{
+      border:0;
+      height: 208px;
+      resize: none;
+    }
+  }
+}

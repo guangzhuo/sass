@@ -1,0 +1,66 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.#{$prefix-css}-tooltip-top {
+	 @include tooltip(top);
+}
+.#{$prefix-css}-tooltip-bottom {
+	 @include tooltip(bottom);
+}
+.#{$prefix-css}-text-overflow {
+	 @include text-overflow;
+}
+.#{$prefix-css}-text-decoration-none {
+	 @include text-decoration(none);
+}
+.#{$prefix-css}-checkbox-square {
+	 @include checkbox(square, $theme-color);
+}
+.#{$prefix-css}-checkbox-circle {
+	 @include checkbox(circle);
+}
+.#{$prefix-css}-radio {
+	 @include radio();
+}
+.#{$prefix-css}-checkbox {
+	 @include checkbox-lvx();
+}
+.#{$prefix-css}-loading-spinner {
+	 @include loading-spinner();
+}
+.#{$prefix-css}-mleft-10 {
+	 @include margin-left(10px);
+}
+.#{$prefix-css}-mright-5 {
+	 @include margin-right(5px);
+}
+.#{$prefix-css}-align-center {
+	 @include text-aligin(center);
+}
+.#{$prefix-css}-align-right {
+	 @include text-aligin(right);
+}
+.#{$prefix-css}-color-theme {
+	 @include color-theme;
+}
+.#{$prefix-css}-fsize-16 {
+	 @include font-size(16px);
+}
+.#{$prefix-css}-float-left {
+	 @include float(left);
+}
+.#{$prefix-css}-float-right {
+	 @include float(right);
+}
+.#{$prefix-css}-height-full {
+	 @include height(100%);
+}
+.#{$prefix-css}-position-relative {
+	 @include position(relative);
+}
+.#{$prefix-css}-cursor-pointer {
+	 @include cursor(pointer);
+}
+.#{$prefix-css}-vertical-align-middle {
+	 @include vertical-align(middle);
+}

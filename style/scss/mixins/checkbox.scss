@@ -1,0 +1,106 @@
+@mixin checkbox($type:square, $color: #57d3f4) {
+    position: relative;
+    display: inline;
+    .checkbox-control{
+    	visibility: hidden;
+		&:checked + label:after{
+			opacity: 1;
+		}
+
+    }
+
+	@if $type == square {
+		label{
+	    	cursor: pointer;
+		    position: absolute;
+		    width: 15px;
+		    height: 15px;
+		    top: 0;
+		    left: 0;
+		    // background: $color;
+		    border:1px solid $color;
+		    -moz-border-radius: 3px;      /* Gecko browsers */
+		    -webkit-border-radius: 3px;   /* Webkit browsers */
+		    border-radius: 3px;            /* W3C syntax */
+		    &:after{
+		    	opacity: 0;
+			    content: '';
+			    position: absolute;
+			    width: 9px;
+			    height: 5px;
+			    background: transparent;
+			    top: 2px;
+			    left: 2px;
+			    border: 2px solid $color;
+			    border-top: none;
+			    border-right: none;
+			    -webkit-transform: rotate(-45deg);
+			    -moz-transform: rotate(-45deg);
+			    -o-transform: rotate(-45deg);
+			    -ms-transform: rotate(-45deg);
+			    transform: rotate(-45deg);
+		    }
+	    }
+    } @else if $type == circle {
+    	label{
+	    	cursor: pointer;
+		    position: absolute;
+		    width: 15px;
+		    height: 15px;
+		    top: 0;
+		    left: 0;
+		    // background: #1e7f88;
+		    border:1px solid $color;
+		    -moz-border-radius: .3px;      /* Gecko browsers */
+		    -webkit-border-radius: 3px;   /* Webkit browsers */
+		    border-radius:100%;            /* W3C syntax */
+		    &:after{
+		    	opacity: 0;
+			    content: '';
+			    position: absolute;
+			    width: 9px;
+			    height: 4px;
+			    background: transparent;
+			    top: 3px;
+			    left: 2px;
+			    border: 2px solid $color;
+			    border-top: none;
+			    border-right: none;
+			    -webkit-transform: rotate(-45deg);
+			    -moz-transform: rotate(-45deg);
+			    -o-transform: rotate(-45deg);
+			    -ms-transform: rotate(-45deg);
+			    transform: rotate(-45deg);
+		    }
+	    }
+    }
+    .checkbox-control[disabled] + label, .checkbox-control[readonly] + label{
+		background:#eee;
+		&:after{
+			border: 2px solid #ddd;
+			border-top: none;
+    		border-right: none;
+		}
+	}
+	.checkbox-control[disabled] + label{
+		cursor: not-allowed;
+	}
+
+}
+@mixin checkbox-lvx() {
+	.lvx-checkbox__inner:hover{
+	    border-color: $hover-color;
+	  }
+	.lvx-checkbox__input.is-checked + .lvx-checkbox__label{
+	    color: $font-color;
+	  }
+	.lvx-checkbox__input.is-disabled .lvx-checkbox__inner{
+	    border-color: $border-color;
+	  }
+	.lvx-checkbox__input.is-disabled.is-checked .lvx-checkbox__inner{
+	    background-color: $disabled-color;
+	    border-color: $border-color;
+	  }
+}
+
+  

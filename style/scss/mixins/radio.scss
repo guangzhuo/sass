@@ -1,0 +1,16 @@
+@mixin radio() {
+	.lvx-radio__inner:hover{
+	    border-color: $hover-color;
+	  }
+	.is-checked .lvx-radio__inner{
+	    background: none;
+	  }
+	.is-checked .lvx-radio__inner .afterVNode{
+	    width: 6px;
+	    height: 6px;
+	    background-color: $theme-color;
+	  }
+	 .lvx-radio__input.is-checked + .lvx-radio__label {
+	    color: $font-color;
+	  }
+}
